@@ -1,0 +1,16 @@
+* {
+  text-align: center;
+}
+
+body {
+  margin:0;
+  padding:0;
+  background: url('../images/bg.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#search {
+  width: 200px;
+  margin: 0 auto;
+}
