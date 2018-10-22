@@ -55,7 +55,7 @@ class RoomController extends Controller
           'price'       => 'required|max:7'
         ]);
 
-        $imageName = time().'.'.$request->image->getClientOriginalName().'.'.$request->image->getClientOriginalExtension();
+        $imageName = Auth::id().'.'.$request->image->getClientOriginalName();
         $request->file('image')->storeAs('public/room', $imageName);
 
         $room = new Room([
@@ -136,7 +136,7 @@ class RoomController extends Controller
       // dd($request);
       if ($request->hasFile('image')) {
 
-        $imageName = time().'.'.$request->image->getClientOriginalName().'.'.$request->image->getClientOriginalExtension();
+        $imageName = Auth::id().'.'.$request->image->getClientOriginalName();
         $request->file('image')->storeAs('public/room', $imageName);
 
         $room->update([

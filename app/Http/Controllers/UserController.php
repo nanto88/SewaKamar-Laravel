@@ -38,7 +38,7 @@ class UserController extends Controller
 
       if ($request->hasFile('image')) {
 
-        $imageName = time().'.'.$request->image->getClientOriginalName().'.'.$request->image->getClientOriginalExtension();
+        $imageName = $user->id.'.'.$request->image->getClientOriginalName();
         $request->file('image')->storeAs('public/user', $imageName);
 
         $user->update([

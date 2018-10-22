@@ -17,6 +17,7 @@
     </div>
 
     <div class="col col-xs-10">
+      <!-- image must be storage:link -->
       <img src="{{ asset('storage/user/' . $user->image) }}" alt="" width="150">
       <br>
       <a href="/user/{{ Auth::user()->id }}/edit" class="btn btn-primary">Edit Profile</a>
