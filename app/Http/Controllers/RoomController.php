@@ -88,7 +88,7 @@ class RoomController extends Controller
         // dd($room->user->name);
         $room = Room::find($id);
         $user = User::whereHas('rooms', function ($query) use($room) {
-        $query->where('user_id', '=', $room->user_id);
+            $query->where('user_id', '=', $room->user_id);
         })->get();
 
         $url = $request->fullUrl();
@@ -163,7 +163,7 @@ class RoomController extends Controller
     public function destroy($id)
     {
         $room = Room::find($id);
-        dd($room);
+        //dd($room);
         $room->delete();
         return redirect('user/' . Auth::user()->id);
     }

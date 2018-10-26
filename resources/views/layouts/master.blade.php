@@ -133,14 +133,17 @@
             var start_date_input=$('input[name="start_date"]'); //date input
             var end_date_input=$('input[name="end_date"]'); //date input
             var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+            var date = new Date();
             start_date_input.datepicker({
                 format: 'yyyy-mm-dd',
+                startDate: date,
                 container: container,
                 todayHighlight: true,
                 autoclose: true,
                 })
             end_date_input.datepicker({
                 format: 'yyyy-mm-dd',
+                startDate: date,
                 container: container,
                 todayHighlight: true,
                 autoclose: true,
